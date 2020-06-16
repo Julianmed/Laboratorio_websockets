@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Tablero de dibujo
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="/cliente/js/dibujo.js"></script>
+        style.
+            body{
+                background:#000000;
+            }
+            .btnred{
+                background-color:#DA1313;
+                color: white;
+                padding: 15px 32px;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            .btnblue{
+                background-color:#1512E0;
+                color: white;
+                padding: 15px 32px;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            .btngreen{
+                background-color:#1A9F28;
+                color: white;
+                padding: 15px 32px;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            .btnwhite{
+                background-color:#ffffff;
+                padding: 15px 32px;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            h1{
+                text-align:center;
+                color: white;
+            }
+            h3{
+                color:white;
+            }
+            .divBotones{
+                position: absolute;
+                right:0;
+            }
+            #tablero{
+                margin:0 auto;
+                width:800px;
+                height:600px;
+                background:#ffffff;
+            }
+            .btnDescarga{
+                background-color:#ffffff;
+                color: black;
+                padding: 5px 16px;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            .btnLimpiar{
+                background-color:#ffffff;
+                color: black;
+                padding: 5px 16px;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+    body(onload = "crearLienzo()")
+    
+        h1 #{message}
+        h3
+            |Usuarios conectados: 
+            span.contador
+        <div class=divBotones> 
+        h3 Selección de colores
+        <button class=btnred onclick="setColor('red')"></button>
+        <button class=btnblue onclick="setColor('blue')"></button>
+        <button class=btngreen onclick="setColor('green')"></button>
+        <button class=btnwhite onclick="setColor('#ffffff')"></button>
+        <div>
+        h3 Gestión del canvas
+        <a id="download">
+        <input type="button" class= btnDescarga value="Descargar" onClick="descarga()">
+        </a>
+        <button class=btnLimpiar onclick = "clearCanvas()" >Limpiar</button>
+        </div>
+        </div>
+        #tablero
+        

@@ -1,0 +1,21 @@
+{
+  "name": "labws-socket.io",
+  "version": "1.0.0",
+  "description": "Laboratorio de websockets con sockets.io, node.js y CANVAS",
+  "dependencies": {
+    "express": "*",
+    "jade": "*",
+    "socket.io": "*"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "socket.io",
+    "node.js",
+    "CANVAS"
+  ],
+  "author": "",
+  "license": "ISC"
+}
